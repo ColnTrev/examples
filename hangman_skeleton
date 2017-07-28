@@ -1,0 +1,21 @@
+def game(word):
+
+def draw(guesses):
+    man = [' O ','\\','|','/','/','\\']
+    for part in range(0,guesses):
+        if part > 0 and part < 4:
+            print(man[part],end='')
+            if part == 3:
+                print()
+        elif part == 4 or part == 5:
+            print(man[part],end='')
+        else:
+            print(man[part])
+    print()
+# end
+word = input('Type a word while the other person looks away! ')
+res = game(word)
+if res == True:
+    print('The word was ' + word)
+else:
+    print('You lose! The word was ' + word)
